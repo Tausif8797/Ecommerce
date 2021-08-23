@@ -217,6 +217,23 @@ Version:1.0
 	background: #F7941D;
 
 }
+.btn_p1{
+	width: 100%;
+	font-weight: 500;
+	font-size: 30px;
+	color: #fff;
+	background: #F7941D;
+	padding: 1px 14px;
+	border: 1px solid;
+	display: inline-block;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	z-index: 5;
+	display: inline-block;
+	text-transform:uppercase;
+	
+}
 #scrollUp {
 	right: 10px;
 	z-index: 33;
@@ -663,7 +680,7 @@ Version:1.0
 	position: relative;
 }
 .header.shop .search-bar {
-	width: 535px;
+	width: 380px;
 	height: 50px;
 	display: inline-block;
 	background: #fff;
@@ -761,6 +778,7 @@ Version:1.0
 	background: #fff;
 	border-top: 1px solid #eee;
 }
+
 .header.shop.v3 .middle-inner {
 	border:none;
 }
@@ -4368,7 +4386,7 @@ Version:1.0
 /* Blog Single CSS */
 .blog-single{
 	background:#fff;
-	padding:70px 0 100px;
+	padding:20px 0 100px;
 }
 .blog-single .blog-single-main {
 	margin-top: 30px;
@@ -4381,8 +4399,8 @@ Version:1.0
 	position:relative;
 }
 .blog-single .image img{
-	width:100%;
-	height:100%;
+	width:680px;
+	height:400px;
 }
 .blog-single .blog-title {
 	font-size: 24px;
@@ -4963,3 +4981,38 @@ Version:1.0
 /*=============================
 	End Footer CSS
 ===============================*/
+.counter {
+    width: 150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	padding: 5px 20px;
+	
+}
+.counter input {
+    width: 100px;
+    border: 1px solid;
+	border-color: #000;
+	border-radius: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background: 0 0;
+    color: #000;
+    appearance: none;
+    outline: 0;
+	
+}
+.counter span {
+	max-width: 100%;
+	border: 0;
+	line-height: 30px ;
+	text-align: center;
+    display: block;
+    font-size: 25px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: #000;
+    user-select: none;
+}

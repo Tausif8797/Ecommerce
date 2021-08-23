@@ -9,13 +9,19 @@
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="assets/css/login.css">
-  <script src="tausif.js" type="text/javascript"></script>
+  <!-- <script src="tausif.js" type="text/javascript"></script> -->
   
 
-  
 
-  
+
+
+
+
 </head>
 
 <body>
@@ -41,37 +47,69 @@
               <button class="loginBtn loginBtn--google">
                 Sign up with Google
               </button><br></br>
-              <form id="form" action="#" method="GET">
-                <div class="form-group">
 
-                  <label for="text" class="sr-only">Full name</label>
-                  <input type="text" name="fullName" id="name" class="form-control" placeholder="Full Name">
-                </div>
-                <div class="form-group">
+              <!-- form start -->
+              <form action="" name="myForm" id="myFormid" onsubmit="return validateForm()" method="post">
 
-                  <label for="text" class="sr-only">Mobile number</label>
-                  <input type="number" name="mobileNum" id="num" class="form-control" placeholder="mobile number">
+                <div class="form-group" id="name">
+                  <!-- <label for="fname" class="fname">Full name</label> -->
+                  <input type="text" name="fname" class="form-control" placeholder="Full Name" required><span
+                    class="formerror"></span>
                 </div>
-                <div class="form-group">
 
-                  <label for="email" class="sr-only">Email</label>
-                  <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+                <div class="form-group" id="phone">
+                  <!-- <label for="fphone" class="fphone">Mobile number</label> -->
+                  <input type="number" name="fphone" class="form-control" placeholder="mobile number" required><span
+                  class="formerror"></span>
                 </div>
-                <div class="form-group mb-4">
-                  <label for="password" class="sr-only">Create Password</label>
-                  <input type="password" name="password" id="password" class="form-control"
-                    placeholder="Create Password">
+
+                <div class="form-group" id="email">
+                  <!-- <label for="femail" class="femail">Email</label> -->
+                  <input type="email" name="femail" class="form-control" placeholder="Email address" required><span
+                  class="formerror"></span>
                 </div>
-                <div class="form-group mb-4">
-                  <label for="password" class="sr-only">Confirm Password</label>
-                  <input type="password" name="password" id="password" class="form-control"
-                    placeholder="Confirm Password">
+
+                <div class="form-group mb-4" id="pass">
+                  <!-- <label for="fpass" class="fpass">Create Password</label> -->
+                  <input type="password" id="password-field" name="fpass" class="form-control" placeholder="Create Password" required><span
+                  class="formerror"></span>
+                  
+                  <script>
+                    function myFunction() {
+                      var x = document.getElementById("password-field");
+                      var y = document.getElementById("password-field1");
+
+                      if (x.type === "password" ) {
+                        x.type = "text";
+                        y.type = "text";
+                      } else {
+                        x.type = "password";
+                        y.type = "password";
+                      }
+                    }
+                    </script>
                 </div>
-                <input name="login" id="login" onclick="formToJson()" class="btn btn-block login-btn mb-4" type="submit"
-                  value="Register Me">
-                  <!-- <button onclick = "fun()">Click me</button> -->
+
+                <div class="form-group mb-4" id="cpass">
+                  <!-- <label for="fcpass" class="fcpass">Confirm Password</label> -->
+                  <input type="password" id="password-field1"  name="fcpass" class="form-control" placeholder="Confirm Password" required><span
+                  class="formerror"></span>
+                  
+                  <input type="checkbox" onclick="myFunction()">Show Password
+                  
+
+                </div>
+                <input onclick="formToJson()" class="btn btn-block login-btn mb-4" type="submit" value="Register Me">
+                <!-- <button onclick = "fun()">Click me</button> -->
+
+               <script>
+               $("myForm").submit(function() {
+                $(":submit", this).attr("disabled", "disabled");
+             });
+             </script> 
 
               </form>
+              <!-- form end -->
 
               <!--<a href="#!" class="forgot-password-link">Forgot password?</a>-->
               <p class="login-card-footer-text">Already registered? <a href="/login/login.html" class="text-reset">Login
@@ -112,13 +150,10 @@
       </div> -->
     </div>
   </main>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-<!--------------------------------------------- Ajax---------------------------------------------- -->
-  
+
+  <!--------------------------------------------- Ajax---------------------------------------------- -->
+  <script src="index.js"></script>
 </body>
 
 </html>
