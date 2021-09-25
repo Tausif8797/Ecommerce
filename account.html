@@ -283,15 +283,14 @@
                         <br> <br>
 
                         <!-- Card Div Start -->
-                        <div class="mainCard">
-
-
+                        <div class="container">
                             <!-- Card 1 Start -->
-
-                            <div class="card" style="width: 18rem;  margin: 5px;">
+                            <!-- <div class="row"> -->
+                            <div class="card mb-3" style="min-width: 18rem;">
                                 <div class="card-body" style="padding: 16px; text-align: center;">
                                     <h5 class="card-title">Tausif Jamal</h5>
-                                    <p class="card-text">H no 44, Road no 22, old purulia road, Mango, Jamshedpur,
+                                    <p class="card-text">H no 44, Road no 22, old purulia road, Mango,
+                                        Jamshedpur,
                                         7894561230.</p>
 
                                     <button href="#" data-toggle="modal" data-target="#editModal"
@@ -302,13 +301,16 @@
                                 </div>
                             </div>
 
+
                             <!-- Card 1 end -->
 
                             <!-- Card 2 start -->
-                            <div class="card" style="width: 18rem;  margin: 5px;">
+
+                            <div class="card mb-3" style="min-width: 18rem;">
                                 <div class="card-body" style="padding: 16px; text-align: center;">
                                     <h5 class="card-title">Faisal Khan</h5>
-                                    <p class="card-text">H no 44, Road no 22, old purulia road, Mango, Jamshedpur,
+                                    <p class="card-text">H no 44, Road no 22, old purulia road, Mango,
+                                        Jamshedpur,
                                         7894561230.</p>
 
                                     <button href="#" data-toggle="modal" data-target="#editModal"
@@ -318,6 +320,7 @@
                             </div>
                             <!-- card 2 end -->
 
+                            <!-- </div> -->
                         </div>
                         <!-- Card Div End -->
 
@@ -420,45 +423,47 @@
 
 
     <!-- Order History Start -->
-    <h1 align=center style="color: #F7941D; font-size: xxx-large;">ORDER HISTORY</h1> <br>
-    <div class="table-responsive col-12">
-        <table class="table table-striped" >
-            <thead style="background-color: gray; color: white;">
+    <!-- <h1 align=center style="color: #F7941D; font-size: xxx-large;">ORDER HISTORY</h1> <br> -->
+  
+    <div class="card-body">
+
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <th>
-                      <h3>PRODUCT</h3>  
-                    </th>
-                    <th>
-                      <h3>QUANTITY</h3>  
-                    </th>
-                    <th>
-                       <h3>TOTAL</h3> 
-                    </th>
-                    <th>
-                      <h3>DATE</h3>  
-                    </th>
-                    <th>
-                      <h3>STATUS</h3>  
-                    </th>
+                    <th scope="col">PRODUCT</th>
+                    <th scope="col">QUANTITY</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col">DATE</th>
+                    <th scope="col">ADDRESS</th>
+                    <th scope="col">STATUS</th>
                 </tr>
             </thead>
-
-            <tbody style="font-size: large;">
-
+            <tbody>
                 <tr>
-                    <td class="py-1">
-                       <a href=""><h4>Shawrama Roll</h4> </a>
-                    </td>
-                    <td class="py-1">
-                       <strong>1</strong> 
-                    </td>
-
+                    <th scope="row">
+                        <ul>
+                            <li>Chicken Biryani</li>
+                            <li>Mutton Biryani</li>
+                            <li>Leg Piece</li>
+                        </ul>
+                    </th>
                     <td>
-                      <strong>&#8377; 799</strong>  
-                    </td>
+                        <ul>
+                            <li>1 Pcs</li>
+                            <li>3 Pcs</li>
+                            <li>4 Pcs</li>
+                        </ul>
 
+                    </td>
                     <td>
-                       <strong>July 1, 2021</strong> 
+                        <p>&#8377; 500</p>
+
+                    </td>
+                    <td>
+                        <p>19 Jul 2021</p>
+                    </td>
+                    <td>
+                        <p>Mango, Jamshedpur</p>
                     </td>
                     <td class="font-weight-medium">
                         <div class="badge badge-success"> Delivered</div>
@@ -466,49 +471,40 @@
                 </tr>
 
                 <tr>
-                    <td class="py-1">
-                       <a href=""><h4>Shawrama Roll</h4> </a>
-                    </td>
-                    <td class="py-1">
-                       <strong>1</strong> 
-                    </td>
+                    <th scope="row">
+                        <ul>
+                            <li>Chicken Biryani</li>
 
+                        </ul>
+                    </th>
                     <td>
-                      <strong>&#8377; 799</strong>  
-                    </td>
+                        <ul>
+                            <li>1 Pcs</li>
 
+                        </ul>
+
+                    </td>
                     <td>
-                       <strong>July 1, 2021</strong> 
+                        <p>&#8377; 500</p>
+
+                    </td>
+                    <td>
+                        <p>19 Jul 2021</p>
+                    </td>
+                    <td>
+                        <p>Bistupur, Jamshedpur</p>
                     </td>
                     <td class="font-weight-medium">
-                        <div class="badge badge-success"> Delivered</div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="py-1">
-                       <a href=""><h4>Shawrama Roll</h4> </a>
-                    </td>
-                    <td class="py-1">
-                       <strong>1</strong> 
-                    </td>
-
-                    <td>
-                      <strong>&#8377; 799</strong>  
-                    </td>
-
-                    <td>
-                       <strong>July 1, 2021</strong> 
-                    </td>
-                    <td class="font-weight-medium">
-                        <div class="badge badge-success"> Delivered</div>
+                        <div class="badge badge-danger">Processing</div>
                     </td>
                 </tr>
 
             </tbody>
         </table>
     </div>
+    <!-- Order History end -->
 
+    
 
     <!-- Start Footer Area -->
     <footer class="footer">
@@ -543,7 +539,7 @@
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Color JS -->
-    <script src="js/colors.js"></script>
+    <!-- <script src="js/colors.js"></script> -->
     <!-- Slicknav JS -->
     <script src="js/slicknav.min.js"></script>
     <!-- Owl Carousel JS -->
